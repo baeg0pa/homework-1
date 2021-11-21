@@ -91,5 +91,5 @@
 * 필드 값 출력
 <img src="https://github.com/baeg0pa/homework-1/blob/main/awk%20%EC%82%AC%EC%9A%A9%202.png?raw=true" width="600" height="400">
 
-* 필드의 문자열 길이 검사
+* 필드의 연산 수행 결과 출력
 <img src="https://github.com/baeg0pa/homework-1/blob/main/awk%20%EC%82%AC%EC%9A%A9%202.png?raw=true" width="600" height="400">

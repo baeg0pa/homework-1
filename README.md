@@ -13,10 +13,10 @@
 
 ### 매개변수
 |종류|설명|
-|:---|:---|
-|-o[옵션]|short option을 의미함.|
+|---|---|
+|-o(option)|short option을 의미함.|
 ||예시: "getopt -o ab:c"=> -a, -b, -c를 옵션으로 가지고, -b는 argument를 가짐. getopts와 비슷함|
-|-l[옵션]|long option을 의미함.
+|-l(option)|long option을 의미함.
 ||예시: "getopt -l help,path:,name:"(예시)=> help,path,name을 옵션으로 가지고, path와 name은 argument를 가짐. ','(반점)은 구분자|
 |$@|주로 이걸로, parameter를 한번에 받아서, while문과 shift를 이용해서 옵션을 구별함|
 
@@ -29,8 +29,10 @@ options=$( getopt -o a:bc -l help,path:,name: -- "$@" )
 echo "$options"
 ```
 
-* 사용
+* 실행
+<img src="https://github.com/baeg0pa/homework-1/blob/main/getopt%20%EC%82%AC%EC%9A%A9.png?raw=true" width="600" height="300">
 
+---
 
 ## 2)getopts 명령어
 
@@ -47,8 +49,35 @@ echo "$options"
 |OptionString|getopts명령이 인식할 옵션 문자를 문자열로 표기. 문자 뒤에 ':'(콜론)이 있을 경우, 해당 옵션은 인수가 있는 것으로 간주됨. 이럴 경우 인수도 제공되어야함.|
 |Name|getopts 명령에 의해 발견된 옵션 문자로 설정됨.|
 |Argument...|고액으로 분리된 하나 이상의 문자열. getopts명령이 올바른 옵션인지 검사함. 생략 시, 위치 매개변수가 사용됨.|
-		
-				
+
+### 간단한 사용예시 ###
+
+```
+#!/bin/bash
+
+while getopts "ab:c" opt; do
+    case $opt in
+        a)
+            echo "-a triggered"
+            ;;
+        b)
+            echo "-b triggered, argument: ${OPTARG}"
+            ;;
+        c)
+            echo "-c triggered"
+            ;;
+        \?)
+            echo "invalid option | not insterted argument"
+            ;;
+    esac
+done
+```
+
+* 실행
+<img src="https://github.com/baeg0pa/homework-1/blob/main/getopt%20%EC%82%AC%EC%9A%A9.png?raw=true" width="600" height="300">
+
+---
+
 ## 3)sed 명령어
 	
 	텍스트를 변환하고 필터링하기위한 편집기
@@ -72,6 +101,8 @@ echo "$options"
 
 	* -n '/^o/p'는 hello에서 'o'로 시작하는 행만 출력
 	* -n '/a/p'는 hello에서 'a'를 포함하는 행만 출력
+
+---
 
 ## 4)awk 명령어
 	

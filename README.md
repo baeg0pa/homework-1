@@ -58,6 +58,8 @@
 
 	* -n '4,$p'는 4번째줄부터 끝까지 출력
 
+* 특정 단어로 시작or포함하는 행들 출력 
+<img src="https://github.com/baeg0pa/homework-1/blob/main/sed%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="200">
 ## 4)awk 명령어
 	
 	awk = Aho + Weinberger + Kernighan. (A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan)

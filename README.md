@@ -84,4 +84,7 @@
 **간단예시로 알아보자**
 
 * 파일 전체 내용 출력
+<img src="https://github.com/baeg0pa/homework-1/blob/main/awk%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="300">
 
+* 필드 값 출력
+<img src="https://github.com/baeg0pa/homework-1/blob/main/awk%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="300">

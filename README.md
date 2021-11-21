@@ -5,11 +5,11 @@
 	getopt명령어는 명령줄을 분석하여 옵션을 분리하고 유효한 옵션을 확인
 
 ### 사용법
-* getopt optstring parameters*
+* getopt optstring parameters
 
-* getopt [options] [--] optstring parameters*
+* getopt [options] [--] optstring parameters
 
-* getopt [options] -o|--options optstring [options] [--] parameters*
+* getopt [options] -o|--options optstring [options] [--] parameters
 
 ### 매개변수
 |종류|설명|
@@ -40,7 +40,7 @@ echo "$options"
 	getopts 명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령
 
 ### 사용법
-* getopts OptionString Name [ Argument ...]*
+* getopts OptionString Name [ Argument ...]
 
 ### 매개변수
 
@@ -85,7 +85,7 @@ done
 	!!그러나 sed명령어를 이용하면 원본에 손상없음!!
 
 ### 사용법
-* sed [OPTION] {script-only-if-no-other-script} [input-file]*
+* sed [OPTION] {script-only-if-no-other-script} [input-file]
 
 **간단예시로 알아보자**
 

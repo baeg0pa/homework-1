@@ -50,21 +50,38 @@
 * '-n'옵션은 'p'(print의 약자)와 같이 자주 쓰임.
 <img src="https://github.com/baeg0pa/homework-1/blob/main/sed%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="400">
 	
-	**hello는 파일명(이 파일에서 내용 읽어옴)**
+	%%hello는 파일명(이 파일에서 내용 읽어옴)%%
 	
 	* -n '1p'는 첫번째줄만 출력
-
 	* -n '1,3p'는 첫번째줄부터 세번째줄까지만 출력
-
 	* -n '4,$p'는 4번째줄부터 끝까지 출력
 
 * 특정 단어로 시작or포함하는 행들 출력 
-<img src="https://github.com/baeg0pa/homework-1/blob/main/sed%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="200">
+<img src="https://github.com/baeg0pa/homework-1/blob/main/sed%20%EC%82%AC%EC%9A%A9%202.png?raw=true" width="600" height="200">
+
+	* -n '/^o/p'는 hello에서 'o'로 시작하는 행만 출력
+	* -n '/a/p'는 hello에서 'a'를 포함하는 행만 출력
+
 ## 4)awk 명령어
 	
-	awk = Aho + Weinberger + Kernighan. (A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan)
-	최초에 awk 기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름.
+	awk = Aho + Weinberger + Kernighan. (A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan 최초에 awk 기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름.)
 	파일로부터 레코드(record)를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화함.
 
 ### 사용법
 *awk [OPTION...] [awk program] [ARGUMENT...]*
+
+|기능|사용 방법|
+|---|---|
+|파일의 전체 내용 출력|awk '{ print }' [FILE]|
+|필드 값 출력|awk '{ print $1 }' [FILE]|
+|필드 값에 임의 문자열을 같이 출력|awk '{print "STR"$1, "STR"$2}' [FILE]|
+|지정된 문자열을 포함하는 레코드만 출력|awk '/STR/' [FILE]|
+|특정 필드들의 합|awk '{sum += $3} END { print sum }' [FILE]|
+|필드의 연산 수행 결과 출력|awk '{print $1, $2, $3+2}' [FILE]|
+|레코드 or 필드의 문자열 길이 검사|awk ' length($0) > 10' [FILE]|
+| ... | ... |
+
+**간단예시로 알아보자**
+
+* 파일 전체 내용 출력
+

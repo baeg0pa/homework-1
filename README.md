@@ -74,13 +74,15 @@ done
 ```
 
 * 실행
-<img src="https://github.com/baeg0pa/homework-1/blob/main/getopt%20%EC%82%AC%EC%9A%A9.png?raw=true" width="600" height="300">
+<img src="https://github.com/baeg0pa/homework-1/blob/main/getopts%20%EC%82%AC%EC%9A%A92.png?raw=true" width="600" height="300">
 
 ---
 
 ## 3)sed 명령어
 	
 	텍스트를 변환하고 필터링하기위한 편집기
+	vi에디터, nano에디터랑 비슷
+	!!그러나 sed명령어를 이용하면 원본에 손상없음!!
 
 ### 사용법
 * sed [OPTION] {script-only-if-no-other-script} [input-file]*
@@ -106,11 +108,13 @@ done
 
 ## 4)awk 명령어
 	
-	awk = Aho + Weinberger + Kernighan. (A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan 최초에 awk 기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름.)
+	awk = Aho + Weinberger + Kernighan.
+	(A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan 최초에 awk 기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름.)
 	파일로부터 레코드(record)를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화함.
 
 ### 사용법
-*awk [OPTION...] [awk program] [ARGUMENT...]*
+
+* awk [OPTION...] [awk program] [ARGUMENT...]
 
 |기능|사용 방법|
 |---|---|

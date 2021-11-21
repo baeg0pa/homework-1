@@ -20,6 +20,17 @@
 ||예시: "getopt -l help,path:,name:"(예시)=> help,path,name을 옵션으로 가지고, path와 name은 argument를 가짐. ','(반점)은 구분자|
 |$@|주로 이걸로, parameter를 한번에 받아서, while문과 shift를 이용해서 옵션을 구별함|
 
+### 간단한 사용예시 ###
+
+```
+#!/bin/bash
+
+options=$( getopt -o a:bc -l help,path:,name: -- "$@" )
+echo "$options"
+```
+
+* 사용
+
 
 ## 2)getopts 명령어
 
@@ -47,7 +58,7 @@
 
 **간단예시로 알아보자**
 
-* '-n'옵션은 'p'(print의 약자)와 같이 자주 쓰임.
+* **'-n'옵션은 'p'(print의 약자)와 같이 자주 쓰임.**
 <img src="https://github.com/baeg0pa/homework-1/blob/main/sed%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="400">
 	
 	%%hello는 파일명(이 파일에서 내용 읽어옴)%%

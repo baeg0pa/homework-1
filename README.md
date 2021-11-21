@@ -2,11 +2,10 @@
 
 ## 1)getopt 명령어
 
-	* getopt명령어는 명령줄을 분석하여 옵션을 분리하고
-	  유효한 옵션을 확인
+	* getopt명령어는 명령줄을 분석하여 옵션을 분리하고 유효한 옵션을 확인
 
-	* 사용법
-		* getopt optstring parameters
+### 사용법
+	* getopt optstring parameters
 
 ## 2)getopts 명령어
 

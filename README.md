@@ -2,19 +2,32 @@
 
 ## 1)getopt 명령어
 
-	* getopt명령어는 명령줄을 분석하여 옵션을 분리하고 유효한 옵션을 확인
+	getopt명령어는 명령줄을 분석하여 옵션을 분리하고 유효한 옵션을 확인
 
 ### 사용법
-	* getopt optstring parameters
+*getopt optstring parameters*
+
+*getopt [options] [--] optstring parameters*
+
+*getopt [options] -o|--options optstring [options] [--] parameters*
+
+### 매개변수
+|종류|설명|
+|:---|:---|
+|-o[옵션]|short option을 의미함.|
+||예시: "getopt -o ab:c"=> -a, -b, -c를 옵션으로 가지고, -b는 argument를 가짐. getopts와 비슷함|
+|-l[옵션]|long option을 의미함.
+||예시: "getopt -l help,path:,name:"(예시)=> help,path,name을 옵션으로 가지고, path와 name은 argument를 가짐. ','(반점)은 구분자|
+|$@|주로 이걸로, parameter를 한번에 받아서, while문과 shift를 이용해서 옵션을 구별함|
+
 
 ## 2)getopts 명령어
 
-	* 명령행 인수를 처리하고 유효한 옵션을 검사
-	
-	* getopts 명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령
+	명령행 인수를 처리하고 유효한 옵션을 검사
+	getopts 명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령
 
-	* 사용법
-		* getopts OptionString Name [ Argument ...]
+### 사용법
+*getopts OptionString Name [ Argument ...]*
 
 ### 매개변수
 
@@ -27,17 +40,21 @@
 				
 ## 3)sed 명령어
 	
-	* 텍스트를 변환하고 필터링하기위한 편집기
+	텍스트를 변환하고 필터링하기위한 편집기
 
-	* 사용법
-		* sed [OPTION] {script-only-if-no-other-script} [input-file]
+### 사용법
+*sed [OPTION] {script-only-if-no-other-script} [input-file]*
+
+**간단예시로 알아보자**
+
+* '-n'옵션은 'p'(print의 약자)와 같이 자주 쓰임.
+
 
 ## 4)awk 명령어
 	
-	* awk = Aho + Weinberger + Kernighan. (A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan)
-	  최초에 awk 기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름
+	awk = Aho + Weinberger + Kernighan. (A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan)
+	최초에 awk 기능을 디자인한 사람들의 이니셜을 조합하여 만든 이름.
+	파일로부터 레코드(record)를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화함.
 
-	* 파일로부터 레코드(record)를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화
-
-	* 사용법
-		*awk [OPTION...] [awk program] [ARGUMENT...]
+### 사용법
+*awk [OPTION...] [awk program] [ARGUMENT...]*

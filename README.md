@@ -5,11 +5,11 @@
 	getopt명령어는 명령줄을 분석하여 옵션을 분리하고 유효한 옵션을 확인
 
 ### 사용법
-*getopt optstring parameters*
+* getopt optstring parameters*
 
-*getopt [options] [--] optstring parameters*
+* getopt [options] [--] optstring parameters*
 
-*getopt [options] -o|--options optstring [options] [--] parameters*
+* getopt [options] -o|--options optstring [options] [--] parameters*
 
 ### 매개변수
 |종류|설명|
@@ -27,7 +27,7 @@
 	getopts 명령은 매개변수 리스트에서 옵션 및 옵션 인수를 검색하는 Korn/POSIX 쉘 내장 명령
 
 ### 사용법
-*getopts OptionString Name [ Argument ...]*
+* getopts OptionString Name [ Argument ...]*
 
 ### 매개변수
 
@@ -43,12 +43,20 @@
 	텍스트를 변환하고 필터링하기위한 편집기
 
 ### 사용법
-*sed [OPTION] {script-only-if-no-other-script} [input-file]*
+* sed [OPTION] {script-only-if-no-other-script} [input-file]*
 
 **간단예시로 알아보자**
 
 * '-n'옵션은 'p'(print의 약자)와 같이 자주 쓰임.
+<img src="https://github.com/baeg0pa/homework-1/blob/main/sed%20%EC%82%AC%EC%9A%A91.png?raw=true" width="600" height="400">
+	
+	**hello는 파일명(이 파일에서 내용 읽어옴)**
+	
+	* -n '1p'는 첫번째줄만 출력
 
+	* -n '1,3p'는 첫번째줄부터 세번째줄까지만 출력
+
+	* -n '4,$p'는 4번째줄부터 끝까지 출력
 
 ## 4)awk 명령어
 	
